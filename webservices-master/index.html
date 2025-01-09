@@ -5,22 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script>
-    async function valami2(){
-        const response2 = await fetch("http://localhost:8080/checks/", {
-        method: "POST",
-    });
-    console.log(response2);
-}
-    async function valami(){
-        const response = await fetch("http://localhost:8080/checks/", {
-        method: "GET",
-    });
-    console.log(response);
-}
-    valami();
-    valami2();
-    </script>
+<body>        
+    <script src="script.js"></script>
+        <div id="main">    
+            <p id="text"></p>
+        </div>
+
 </body>
 </html>
