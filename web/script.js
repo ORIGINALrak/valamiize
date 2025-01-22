@@ -109,7 +109,17 @@ async function getAllProcedures() {
 }
 
 function createProcedure() {
-    let response = fetch("http://localhost:8080/procedures/",
+function waioawduihioawdawdw() {
+    let anyád = []
+    for(let i = 0; i < guids.length; i++)
+    {
+        anyád.push('<a href="getById(guids[i])">' + guids[i] + '</a>');
+    }
+    return anyád;
+}
+
+async function createProcedure() {
+    let response = await fetch("http://localhost:8080/procedures/",
         {
             method: "POST",
             headers: {
@@ -120,17 +130,14 @@ function createProcedure() {
                 "name": "some_fancy_name",
                 "version": "0.0.1",
                 "description": "The scope of this procedure is defined by some theory about how to validate related data.",
-                "checks": [
-                    "dbf2a72a-15cf-4fc6-a7fd-879f75989a6c",
-                    "87bf38ab-d853-470b-b6a0-129867378a05",
-                    "9c356f92-7b37-4ed5-bf88-3806cb4f5ad1",
-                    "00d31962-d426-4bde-86bd-1682b2a3d582"
-                  ]
+                "checks": waioawduihioawdawdw(), 
             })
         },
     )
-
+    document.getElementById('procedure').innerHTML = JSON.stringify(response)
+    guids = [];
 }
+
 
 async function getProcedureById(GUID) {
     let response = await fetch(`http://localhost:8080/procedures/${GUID}`,
